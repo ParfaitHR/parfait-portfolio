@@ -26,7 +26,7 @@ SECRET_KEY = '#!0*75&s-0r17p7#vuh382e+n8=#nvfib2y!+xs=q5k94=*tpx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://parfait-portfolio-website.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['parfait-portfolio-website.herokuapp.com','127.0.0.1']
 
 
 # Application definition
