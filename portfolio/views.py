@@ -119,49 +119,6 @@ def services(request):
 
     return render(request, 'portfolio/services.html', content)
 
-def clientele(request):    
-    
-    files = os.listdir(os.path.join(settings.BASE_DIR, "static/images/clientele/"))
-    
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = 'Query - ' + form.cleaned_data['InputFullName']
-            email = form.cleaned_data['InputEmail']
-            content = 'Hi Startup, \n' + form.cleaned_data['InputQuery'] + '\nRegards\n' + form.cleaned_data['InputFullName'] + '\n' + form.cleaned_data['InputNumber']
-
-            send_mail(
-                subject,
-                content,
-                email,
-                ['parfaithrm@gmail.com']
-            )
-
-            content = {
-                'form': form,
-                'title' : 'Clientele',
-                'css' : 'css/clientele.css',
-                'message':'Query sent Successfully',
-                'files' : files,
-                'images' : 0,
-            }
-
-            return render(request, 'portfolio/clientele.html', content) 
-    else:
-            form = ContactForm()
-    
-
-
-    content = {
-        'form': form,
-        'title' : 'Clientele',
-        'css' : 'css/clientele.css',
-        'files' : files,
-        'images' : 0,
-    }
-
-    return render(request, 'portfolio/clientele.html', content)
-
 def opportunities(request):
 
     jobs = Job.objects.all()

@@ -100,21 +100,6 @@
   }
 }
 
-.section-1 {
-  padding: 50px;
-  align-content: center;
-}
-
-.section-2 {
-  padding: 50px;
-  background-color: #e00061;
-  color: white;
-}
-
-.section-header {
-  font-weight: bold;
-  margin: 50px;
-}
 
 .btn-info {
     color: #e00061;

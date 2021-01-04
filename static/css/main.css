@@ -21,3 +21,22 @@ body {
 .display-5 {
     font-weight: bold;
 }
+
+.section-1 {
+    width: 100%;
+    margin: 0px;
+    padding: 50px;
+    align-content: center;
+  }
+  
+.section-2 {
+    width: 100%;
+    margin: 0px;
+    padding: 50px;
+    background-color: #e00061;
+    color: white;
+}
+  
+.section-header {
+    font-weight: bold;
+}

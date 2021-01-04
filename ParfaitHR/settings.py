@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import os
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +26,7 @@ SECRET_KEY = '#!0*75&s-0r17p7#vuh382e+n8=#nvfib2y!+xs=q5k94=*tpx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.parfaithrsolutions.com','parfait-portfolio-website.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['https://parfait-portfolio-website.herokuapp.com/','127.0.0.1']
 
 
 # Application definition

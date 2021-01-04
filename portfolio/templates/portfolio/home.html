@@ -37,7 +37,7 @@
 				<div class="carousel-caption text-right">
 					<h1><strong>Clients</strong> are Everywhere and Everything…</h1>
 					<p>because for us Client is the first priority!</p>
-					<p><a class="btn btn-lg btn-primary" href="{% url 'clientele' %}" role="button">View Clients</a></p>
+					<p><a class="btn btn-lg btn-primary" href="{% url 'services' %}" role="button">View Clients</a></p>
 				</div>
 			</div>
 		</div>
@@ -54,11 +54,11 @@
 
 <!-- About Section-->
 <section class="row justify-content-center section-1">
-	<div class="col-7" style="padding: 40px;">
+	<div class="col-7" style="padding: 50px;">
 		<h2 class="display-4 section-header">About us</h2>
 		<br>
-		<p style="margin-left: 50px;">Parfait HR Solutions is a growing firm, providing its services to various sectors. We are focusing mostly in maintaining high standards of ethics & fair play has become our working philosophy, which has helped us to meet our client’s requirements & building ending relationships.</p>
-		<button  style="margin-left: 50px;" href="{% url 'about' %}" class='btn btn-primary'>Read More</button>
+		<p>Parfait HR Solutions is a growing firm, providing its services to various sectors. We are focusing mostly in maintaining high standards of ethics & fair play has become our working philosophy, which has helped us to meet our client’s requirements & building ending relationships.</p>
+		<button href="{% url 'about' %}" class='btn btn-primary'>Read More</button>
 	</div>
 	<div class="col-5 align-self-center">
 		<img class="zoom" src="{% static 'images/logo-full.png'%}">
@@ -95,7 +95,7 @@
     <div class="col-5 align-self-center">
         <img width="100%" src="{% static 'images/phil.png'%}">
     </div>
-    <div class="col-7 justify-content-right" style="padding: 40px; text-align: center;">
+    <div class="col-7 justify-content-right" style="text-align: center;">
         <h2 class="display-4 section-header">The Philosophy</h2>
         <br>
         <p><strong>We</strong> understand <strong>who</strong> the <strong>Client</strong> is...</p>
@@ -109,7 +109,7 @@
 </section>
 
 <!-- Comparison Section -->
-<section class="section-1">
+<section class="section-1" id="client-priority">
 	<div class="container row align-items-center ">
 		<div class="col-5">
 			<h2 class="display-5 section-header">Our Priority is<br><strong>Quality Time & Client Satisfaction</strong></h2>
@@ -241,25 +241,47 @@
 <!-- Services Section -->
 <section class="col justify-content-center section-2">
 	<div class="row justify-content-md-center">
-		<h2 class="display-4 section-header">Recruitement Services</h2>
+		<h2 class="display-4 section-header">Recruitment Services</h2>
 	</div>
 	<div class="row">
-		<div class="col service">
-			<img height="200px" src="{% static 'images/s1.png' %}">
+		<div class="col-3 service">
+			<img width="190px" src="{% static 'images/s1.png' %}">
 			<h3 class="feature">Offer Management</h3>
 		</div>
-		<div class="col service">
-			<img height="200px" src="{% static 'images/s2.png' %}">
+		<div class="col-3 service">
+			<img width="190px" src="{% static 'images/s2.png' %}">
 			<h3 class="feature">Pre Joining & Post Joining activities</h3>
 		</div>
-		<div class="col service">
-			<img height="200px" src="{% static 'images/s3.png' %}">
+		<div class="col-3 service">
+			<img width="190px" src="{% static 'images/s3.png' %}">
 			<h3 class="feature">Recruitment Activities</h3>
 		</div>
-		<div class="col service">
-			<img height="200px" src="{% static 'images/s4.png' %}">
+		<div class="col-3 service">
+			<img width="190px" src="{% static 'images/s4.png' %}">
 			<h3 class="feature">Vendor Management</h3>
 		</div>          
 	</div>
+</section>
+
+<section class="col section-1 justify-content-center">
+    <h2 class="display-4 section-header" style="text-align: center;">Recruitment Sources</h2>
+    <div class="row clientele-gallery justify-content-center">
+        <div class="column clientele-column align-self-center">
+            <img src="{% static 'images/Recruitment/1.png' %}" alt="">   
+            <img src="{% static 'images/Recruitment/2.png' %}" alt="">   
+        </div> 
+        <div class="column clientele-column align-self-center">  
+            <img src="{% static 'images/Recruitment/3.png' %}" alt=""> 
+            <img src="{% static 'images/Recruitment/4.png' %}" alt="">  
+        </div> 
+        <div class="column clientele-column align-self-center">  
+            <img src="{% static 'images/Recruitment/5.png' %}" alt="">   
+            <img src="{% static 'images/Recruitment/6.png' %}" alt="">    
+        </div> 
+        <div class="column clientele-column align-self-center">
+            <img src="{% static 'images/Recruitment/7.png' %}" alt="">   
+            <img src="{% static 'images/Recruitment/8.png' %}" alt="">    
+        </div> 
+    </div>
 </section>
 {% endblock %}
