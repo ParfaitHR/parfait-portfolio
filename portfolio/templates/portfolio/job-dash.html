@@ -77,44 +77,44 @@
           <h5><strong>Filter</strong></h5>
           <hr style="border-color: #eeeeee;">
           <form method="GET">              
-              <div class="form-label-group">
-                {{ filter.form.job_title }}
-                {% if filter.form.job_title.errors %}
-                    {% for error in filter.form.job_title.errors %}
-                        <strong>{{ error|escape }}</strong>
-                    {% endfor %}
-                {% endif %}
-                <label for="job_title">Job Title</label>
+            <div class="form-label-group">
+                  {{ filter.form.job_title }}
+                  {% if filter.form.job_title.errors %}
+                      {% for error in filter.form.job_title.errors %}
+                          <strong>{{ error|escape }}</strong>
+                      {% endfor %}
+                  {% endif %}
+                  <label for="job_title">Job Title</label>
               </div>            
 
               <div class="form-label-group">
-                {{ filter.form.company_name }}
-                {% if filter.form.company_name.errors %}
-                    {% for error in filter.form.company_name.errors %}
-                        <strong>{{ error|escape }}</strong>
-                    {% endfor %}
-                {% endif %}
-                <label for="company_name">Company</label>
+                  {{ filter.form.company_name }}
+                  {% if filter.form.company_name.errors %}
+                      {% for error in filter.form.company_name.errors %}
+                          <strong>{{ error|escape }}</strong>
+                      {% endfor %}
+                  {% endif %}
+                  <label for="company_name">Company</label>
               </div>            
 
               <div class="form-label-group">
-                {{ filter.form.salary }}
-                {% if filter.form.salary.errors %}
-                    {% for error in filter.form.salary.errors %}
-                        <strong>{{ error|escape }}</strong>
-                    {% endfor %}
-                {% endif %}
-                <label for="salary">Salary</label>
+                  {{ filter.form.salary }}
+                  {% if filter.form.salary.errors %}
+                      {% for error in filter.form.salary.errors %}
+                          <strong>{{ error|escape }}</strong>
+                      {% endfor %}
+                  {% endif %}
+                  <label for="salary">Salary</label>
               </div>            
               <div class="form-label-group">
-                {{ filter.form.vacancies }}
-                {% if filter.form.vacancies.errors %}
-                    {% for error in filter.form.vacancies.errors %}
-                        <strong>{{ error|escape }}</strong>
-                    {% endfor %}
-                {% endif %}
-                <label for="vacancies">Vacancies</label>
-              </div>            
+                  {{ filter.form.experience }}
+                  {% if filter.form.experience.errors %}
+                      {% for error in filter.form.experience.errors %}
+                          <strong>{{ error|escape }}</strong>
+                      {% endfor %}
+                  {% endif %}
+                  <label for="experience">Experience (in Years)</label>
+              </div>        
               <button class="btn btn-light" type="submit">Search</button>
           </form>
       </div>
@@ -127,9 +127,10 @@
             <th class="th">ID</th>
             <th class="th">Job Title</th>
             <th class="th">Company Name</th>
+            <th class="th">Role</th>
             <th class="th">Salary</th>
-            <th class="th">Vacancies</th>
-            <th class="th">Status</th>
+            <th class="th">Location</th>
+            <th class="th">Experience</th>
             <th class="th">Edit</th>
             <th class="th">Delete</th>
           </thead>
@@ -139,9 +140,10 @@
               <td class="td">{{job.id}}</td>
               <td class="td">{{job.job_title}}</td>
               <td class="td">{{job.company_name}}</td>
+              <td class="td">{{job.role}}</td>
               <td class="td">{{job.salary}}</td>
-              <td class="td">{{job.vacancies}}</td>
-              <td class="td">{{job.status}}</td>
+              <td class="td">{{job.location}}</td>
+              <td class="td">{{job.experience}}</td>
               <td class="td"><a class="btn btn-primary"  href="{% url 'edit-vacancy' job.id %}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                 <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
               </svg></a></td>

@@ -53,13 +53,13 @@
                     <label for="salary">Salary</label>
                 </div>            
                 <div class="form-label-group">
-                    {{ filter.form.vacancies }}
-                    {% if filter.form.vacancies.errors %}
-                        {% for error in filter.form.vacancies.errors %}
+                    {{ filter.form.experience }}
+                    {% if filter.form.experience.errors %}
+                        {% for error in filter.form.experience.errors %}
                             <strong>{{ error|escape }}</strong>
                         {% endfor %}
                     {% endif %}
-                    <label for="vacancies">Vacancies</label>
+                    <label for="experience">Experience (in Years)</label>
                 </div>     
                 <button class="btn btn-light" type="submit">Search</button>
             </form>
@@ -69,18 +69,28 @@
                 {% for job in jobs %}
                 <div class="col-4">
                     <div class="job-card">
-                        <h5 class="job-title">{{job.job_title}}</h5>
-                        <p class="company">{{job.company_name}}</p>
-                        <hr>
                         <div class="row">
+                            <h5 class="col job-title">{{job.job_title}}</h5>
+                            <p class="col company">{{job.company_name}}</p>
+                        </div>
+                        <hr style="border-color: #e00061;">
+                        <div class="row">
+                            <div class="col-6">
+                                <p><strong>Role</strong> : {{job.role}}</p>
+                            </div>
                             <div class="col-6">
                                 <p><strong>Salary</strong> : {{job.salary}}</p>
                             </div>
+                        </div>          
+                        <div class="row">
                             <div class="col-6">
-                                <p><strong>Vacancy</strong> : {{job.vacancies}}</p>
+                                <p><strong>Location</strong> : {{job.location}}</p>
                             </div>
-                        </div>                
-                        <p><strong>Status</strong> : {{job.status}}</p>
+                            <div class="col-6">
+                                <p><strong>Experience</strong> : {{job.experience}}</p>
+                            </div>
+                        </div>              
+                        <p><strong>Job Description</strong> : <a href="{{job.jd}}">View</a></p>
                     </div>
                 </div>    
                 {% endfor %}

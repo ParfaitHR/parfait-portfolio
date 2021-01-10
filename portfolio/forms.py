@@ -68,15 +68,16 @@ class CVForm(Form):
 class JobForm(ModelForm):
     class Meta:
         model = Job
-        fields = ['job_title','company_name','salary','vacancies','status']
+        fields = ['job_title','company_name','role','salary','location','experience','jd']
 
         widgets = {
             'job_title' : forms.TextInput(attrs={'class':'form-control'}),
             'company_name' : forms.TextInput(attrs={'class':'form-control'}),
+            'role' : forms.Select(attrs={'class':'form-control'}),
             'salary' : forms.NumberInput(attrs={'class':'form-control'}),
-            'vacancies' : forms.NumberInput(attrs={'class':'form-control'}),
-            'status' : forms.Select(attrs={'class':'form-control'}),
-
+            'location' : forms.TextInput(attrs={'class':'form-control'}),
+            'experience' : forms.NumberInput(attrs={'class':'form-control'}),
+            'jd' : forms.TextInput(attrs={'class':'form-control'}),
         }
         
 class CreateUserForm(UserCreationForm):
